@@ -18,6 +18,7 @@ struct MultipleSelectionRow: View {
         }, label: {
             HStack {
                 Text(store.name)
+                    .foregroundStyle(.white)
                 Spacer()
                 if isSelected {
                     Image(systemName: "checkmark")
@@ -27,7 +28,11 @@ struct MultipleSelectionRow: View {
     }
 }
 
-//#Preview {
-//    MultipleSelectionRow(store: Store(name: "Elgiganten Barbarkby", locations: "Barkabarby"), isSelected: true, action: {})
-//        .preferredColorScheme(.dark)
-//}
+#Preview {
+    MultipleSelectionRow(
+        store: Store(name: "Elgiganten Barkarby", locations: "Barkarby", chain: "Elgiganten"),
+        isSelected: true,
+        action: {}
+    )
+    .preferredColorScheme(.dark)
+}

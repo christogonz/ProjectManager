@@ -10,7 +10,18 @@
 import Foundation
 
 class StoreViewModel: ObservableObject {
-    @Published var stores: [Store] = [] {
+    @Published var stores: [Store] = [
+        Store(name: "Elgiganten Exempel", locations: "Exemper Bromma", chain: "Elgiganten"),
+        Store(name: "Elgiganten Exempel", locations: "Exemper Bromma", chain: "Elgiganten"),
+        Store(name: "Elgiganten Exempel", locations: "Exemper Bromma", chain: "Elgiganten"),
+        Store(name: "Elgiganten Exempel", locations: "Exemper Bromma", chain: "Elgiganten"),
+        Store(name: "Telia Exempel", locations: "Exemper Bromma", chain: "Telia"),
+        Store(name: "Telia Exempel", locations: "Exemper Bromma", chain: "Telia"),
+        Store(name: "Telia Exempel", locations: "Exemper Bromma", chain: "Telia"),
+        Store(name: "Tele2 Exempel", locations: "Exemper Bromma", chain: "Tele2"),
+        Store(name: "Tele2 Exempel", locations: "Exemper Bromma", chain: "Tele2"),
+        Store(name: "Tele2 Exempel", locations: "Exemper Bromma", chain: "Tele2"),
+    ] {
         didSet {
             saveStores()
         }

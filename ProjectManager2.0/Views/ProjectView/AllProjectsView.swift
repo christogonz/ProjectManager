@@ -47,6 +47,7 @@ struct AllProjectsView: View {
                                             .font(.headline)
                                         Text(project.discription)
                                             .font(.subheadline)
+                                            .foregroundStyle(.gray)
                                     }
                                     Spacer()
                                     

@@ -13,6 +13,9 @@ struct CreateProjectSheetView: View {
     @Binding var selectedStore: [Store]
     var storeViewModel: StoreViewModel
     var onSave: () -> Void
+    @State private var selectedChain = "Elgiganten"
+    
+    let storeChains = ["Elgiganten", "Telia", "Tele2", "Telenor", "Tre"]
     
     var body: some View {
         VStack {
@@ -25,9 +28,28 @@ struct CreateProjectSheetView: View {
                 .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    ForEach(storeChains, id: \.self) {
+                        chain in
+                        Text(chain)
+                            .padding()
+                            .background(chain ==  selectedChain ? Color.blue : .gray.opacity(0.2))
+                            .clipShape(.rect(cornerRadius: 8))
+                            .foregroundStyle(chain == selectedChain ? .white : .gray)
+                            .onTapGesture {
+                                selectedChain = chain
+                            }
+                    }
+                }
+                .padding()
+            }
+            
             
             List {
-                ForEach(storeViewModel.stores) {store in
+                ForEach(storeViewModel.stores.filter {$0.chain == selectedChain }) {store in
+                    
+                    
                     MultipleSelectionRow(store: store, isSelected: selectedStore.contains(where: { $0.id == store.id})) {
                         if selectedStore.contains(where: { $0.id == store.id }) {
                             selectedStore.removeAll { $0.id == store.id}
@@ -35,6 +57,8 @@ struct CreateProjectSheetView: View {
                             selectedStore.append(store)
                         }
                     }
+                    
+                    
                 }
             }
             
@@ -46,3 +70,21 @@ struct CreateProjectSheetView: View {
     }
 }
 
+#Preview {
+    @Previewable @State var newProjectName = ""
+    @Previewable @State var newProjectDescription = ""
+    @Previewable @State var selectedStore: [Store] = [
+        Store(name: "Elgiganten", locations: "Bromma", chain: "Elgiganten")
+    ]
+//    let storeViewModel = StoreViewModel()
+    
+    
+    CreateProjectSheetView(
+        newProjectName: $newProjectName,
+        newProjectDescription: $newProjectDescription,
+        selectedStore: $selectedStore,
+        storeViewModel: StoreViewModel(),
+        onSave: {}
+    )
+    .preferredColorScheme(.dark)
+}

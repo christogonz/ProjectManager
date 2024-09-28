@@ -45,6 +45,16 @@ struct CreateStoreSheetView: View {
     }
 }
 
-//#Preview {
-//    CreateStoreSheetView(newStoreName: $newStoreName, newStoreLocation: $newStoreLocation, selectedChain: $selectedChain, onSave: {})
-//}
+#Preview {
+    @Previewable @State var newStoreName = ""
+    @Previewable @State var newStoreLocation = ""
+    @Previewable @State var selectedChain = "Elgiganten"
+    
+    CreateStoreSheetView(
+        newStoreName: $newStoreName,
+        newStoreLocation: $newStoreLocation,
+        selectedChain: $selectedChain,
+        onSave: {}
+    )
+    .preferredColorScheme(.dark)
+}
