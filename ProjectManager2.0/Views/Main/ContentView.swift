@@ -12,7 +12,12 @@ struct ContentView: View {
         TabView {
             AllProjectsView()
                 .tabItem {
-                    Label("All Projects", systemImage: "folder")
+                    VStack {
+                        Image(systemName: "folder")
+                        Text("All Projects")
+                    }
+                    
+//                    Label("All Projects", systemImage: "folder")
                 }
             
             AllStoresView()
@@ -20,6 +25,8 @@ struct ContentView: View {
                     Label("All Stores", systemImage: "building.2")
                 }
         }
+        .background(.thinMaterial)
+        
     }
 }
 

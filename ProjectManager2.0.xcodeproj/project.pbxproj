@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2080EFC2CA841CE00742E62 /* AnimatedBgColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2080EFB2CA841CE00742E62 /* AnimatedBgColor.swift */; };
+		C2080EFE2CA847EF00742E62 /* CustomIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2080EFD2CA847EF00742E62 /* CustomIconButton.swift */; };
+		C2080F002CA84CEB00742E62 /* CustomButton2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2080EFF2CA84CEB00742E62 /* CustomButton2.swift */; };
+		C2080F042CA8549100742E62 /* CardStoreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2080F032CA8549100742E62 /* CardStoreList.swift */; };
 		C23D74292C98843400DE719D /* ProjectManager2_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23D74282C98843400DE719D /* ProjectManager2_0App.swift */; };
 		C23D742B2C98843400DE719D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23D742A2C98843400DE719D /* ContentView.swift */; };
 		C23D742D2C98843500DE719D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C23D742C2C98843500DE719D /* Assets.xcassets */; };
@@ -24,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C2080EFB2CA841CE00742E62 /* AnimatedBgColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedBgColor.swift; sourceTree = "<group>"; };
+		C2080EFD2CA847EF00742E62 /* CustomIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIconButton.swift; sourceTree = "<group>"; };
+		C2080EFF2CA84CEB00742E62 /* CustomButton2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton2.swift; sourceTree = "<group>"; };
+		C2080F032CA8549100742E62 /* CardStoreList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStoreList.swift; sourceTree = "<group>"; };
 		C23D74252C98843400DE719D /* ProjectManager2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectManager2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C23D74282C98843400DE719D /* ProjectManager2_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManager2_0App.swift; sourceTree = "<group>"; };
 		C23D742A2C98843400DE719D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +60,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2080EFA2CA841AF00742E62 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C2080EFB2CA841CE00742E62 /* AnimatedBgColor.swift */,
+				C2080EFD2CA847EF00742E62 /* CustomIconButton.swift */,
+				C2080EFF2CA84CEB00742E62 /* CustomButton2.swift */,
+				C2080F032CA8549100742E62 /* CardStoreList.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		C23D741C2C98843400DE719D = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +110,7 @@
 		C23D74362C98844F00DE719D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C2080EFA2CA841AF00742E62 /* Components */,
 				C280D88D2C99DAD5001FF6A5 /* Main */,
 				C23D743A2C9884A800DE719D /* AllStoreView */,
 				C23D74392C98849A00DE719D /* ProjectView */,
@@ -224,15 +244,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C23D742B2C98843400DE719D /* ContentView.swift in Sources */,
+				C2080F042CA8549100742E62 /* CardStoreList.swift in Sources */,
 				C23D74292C98843400DE719D /* ProjectManager2_0App.swift in Sources */,
 				C280D8982C99E336001FF6A5 /* ProjectDetailView.swift in Sources */,
 				C280D89D2C99F4D0001FF6A5 /* MultipleSelectionRow.swift in Sources */,
 				C280D89A2C99F3F8001FF6A5 /* CreateProjectSheetView.swift in Sources */,
+				C2080EFC2CA841CE00742E62 /* AnimatedBgColor.swift in Sources */,
 				C280D8902C99DE33001FF6A5 /* ProjectModel.swift in Sources */,
 				C23D743E2C9884D600DE719D /* AllProjectsView.swift in Sources */,
 				C280D8952C99DF38001FF6A5 /* ProjectViewModel.swift in Sources */,
 				C23D743C2C9884C200DE719D /* AllStoresView.swift in Sources */,
 				C23D74422C98889B00DE719D /* StoreViewModel.swift in Sources */,
+				C2080F002CA84CEB00742E62 /* CustomButton2.swift in Sources */,
+				C2080EFE2CA847EF00742E62 /* CustomIconButton.swift in Sources */,
 				C280D89F2C9B3CB3001FF6A5 /* CreateStoreSheetView.swift in Sources */,
 				C23D74402C98876200DE719D /* StoreModel.swift in Sources */,
 			);

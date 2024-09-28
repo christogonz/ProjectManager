@@ -38,8 +38,13 @@ class StoreViewModel: ObservableObject {
     }
     
     //MARK: Detele Store
-    func deleteStore(at indexSet: IndexSet) {
-        stores.remove(atOffsets: indexSet)
+//    func deleteStore(at indexSet: IndexSet) {
+//        stores.remove(atOffsets: indexSet)
+//    }
+    func deleteStore(_ store: Store) {
+        if let index = stores.firstIndex(where: { $0.id == store.id }) {
+            stores.remove(at: index)
+        }
     }
     
     //MARK: Save Stores
